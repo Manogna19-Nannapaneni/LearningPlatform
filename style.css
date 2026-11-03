@@ -1,0 +1,617 @@
+/* =========================
+   GENERAL STYLES
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10152e, #24245c);
+    color: #f5f5ff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: linear-gradient(to right, #171b4d, #492b7c);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    width: 55px;
+    height: 55px;
+    animation: rotateLogo 1s ease-in-out;
+}
+
+.logo-section h1 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c9a7ff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+main {
+    min-height: 75vh;
+}
+
+
+/* =========================
+   HOME PAGE BACKGROUND
+   ========================= */
+
+/* Background image appears only on index.html */
+
+body.home-page {
+    background-image:
+        linear-gradient(rgba(8, 10, 35, 0.25),
+            rgba(20, 10, 50, 0.25)),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.home-page .hero {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Transparent so the background image is visible */
+    background: transparent;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(178, 120, 255, 0.8);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #eeeeff;
+}
+
+
+/* =========================
+   WELCOME LOGO
+   ========================= */
+
+.welcome-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.welcome-heading h2 {
+    margin: 0;
+    font-size: 42px;
+    color: #ffffff;
+}
+
+.welcome-logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #6b3fa0, #9b59d0);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(177, 112, 255, 0.8);
+}
+
+
+/* =========================
+   COURSES SECTION
+   ========================= */
+
+.subjects {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Transparent so the background image continues */
+
+.home-page .subjects {
+    background: transparent;
+}
+
+.subjects h2 {
+    margin-bottom: 35px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(178, 120, 255, 0.7);
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    width: 300px;
+    padding: 28px;
+    border-radius: 14px;
+    background: linear-gradient(135deg,
+            rgba(40, 45, 100, 0.9),
+            rgba(85, 45, 130, 0.9));
+    border: 1px solid rgba(200, 170, 255, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(155, 89, 208, 0.5);
+}
+
+.course-card h3 {
+    color: #e3ccff;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color: #f0efff;
+    margin-bottom: 10px;
+}
+
+.course-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.course-icon {
+    font-size: 24px;
+}
+
+/* =========================
+   WHY LEARN SECTION
+   ========================= */
+
+.why-learn {
+    padding: 60px 10%;
+}
+
+/* Transparent so the background image continues */
+
+.home-page .why-learn {
+    background: transparent;
+}
+
+.why-learn h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(178, 120, 255, 0.7);
+}
+
+.why-learn ul {
+    padding-left: 20px;
+}
+
+.why-learn li {
+    margin-bottom: 10px;
+    color: #f0efff;
+}
+
+
+/* =========================
+   TUTORIAL PAGES
+   ========================= */
+
+.tutorial-page {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    animation: fadeInUp 1s ease;
+}
+
+.tutorial-page h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e5e3ff;
+}
+
+
+/* =========================
+   TUTORIAL TOPICS
+   ========================= */
+
+.topic {
+    background: linear-gradient(135deg, #24285a, #3d2866);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #9b59d0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(155, 89, 208, 0.35);
+}
+
+.topic h3 {
+    color: #e3ccff;
+    margin-bottom: 15px;
+}
+
+.topic p {
+    margin-bottom: 15px;
+    color: #f0efff;
+}
+
+.topic ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CODE BLOCKS
+   ========================= */
+
+pre {
+    background: #0b0d24;
+    color: #dcd7ff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 15px;
+    border: 1px solid rgba(170, 140, 255, 0.25);
+}
+
+
+/* =========================
+   BACK TO HOME
+   ========================= */
+
+.back-home {
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+/* =========================
+   ABOUT PAGE
+   ========================= */
+
+.about-page {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    animation: fadeInUp 1s ease;
+}
+
+.about-page h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-page>p {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #e5e3ff;
+}
+
+.about-section {
+    background: linear-gradient(135deg, #24285a, #3d2866);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #9b59d0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(155, 89, 208, 0.35);
+}
+
+.about-section h3 {
+    color: #e3ccff;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.login-container {
+    width: 400px;
+    max-width: 100%;
+    padding: 35px;
+    background: linear-gradient(135deg, #24285a, #3d2866);
+    border-radius: 15px;
+    border: 1px solid rgba(200, 170, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: fadeInUp 1s ease;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.login-intro {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #e5e3ff;
+}
+
+
+/* =========================
+   LOGIN FORM
+   ========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #f0efff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7770a8;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #c9c7df;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #b178ff;
+    box-shadow: 0 0 10px rgba(177, 120, 255, 0.5);
+}
+
+.remember {
+    margin-bottom: 20px;
+    color: #f0efff;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to right, #6b3fa0, #9b59d0);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(177, 112, 255, 0.7);
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-text a {
+    color: #d5b5ff;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #171b4d, #492b7c);
+    color: white;
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .welcome-heading {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .welcome-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tutorial-page,
+    .about-page {
+        width: 90%;
+    }
+
+    .course-container {
+        gap: 20px;
+    }
+}

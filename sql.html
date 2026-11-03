@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Tutorial - Learning Platform</title>
+
+    <link rel="icon" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo-section">
+
+            <img src="logo.png" alt="Learning Platform Logo">
+
+            <h1>Learning Platform</h1>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="html.html">HTML</a>
+
+            <a href="css.html">CSS</a>
+
+            <a href="javascript.html">JavaScript</a>
+
+            <a href="java.html">Java</a>
+
+            <a href="sql.html">SQL</a>
+
+            <a href="about.html">About</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+    </header>
+
+
+    <main class="tutorial-page">
+
+        <h2>SQL Tutorial</h2>
+
+        <p class="intro">
+            Learn the basics of SQL and understand how
+            to store, manage and retrieve data from databases.
+        </p>
+
+
+        <section class="topic">
+
+            <h3>1. What is SQL?</h3>
+
+            <p>
+                SQL stands for Structured Query Language.
+                It is used to communicate with and manage
+                relational databases.
+            </p>
+
+            <p>
+                SQL can be used to create databases and tables,
+                insert data, retrieve data, update records
+                and delete records.
+            </p>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>2. What is a Database?</h3>
+
+            <p>
+                A database is an organized collection of data.
+                It helps us store and manage information
+                efficiently.
+            </p>
+
+            <pre>
+CREATE DATABASE learning_platform;
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>3. Creating a Table</h3>
+
+            <p>
+                Tables are used to organize data into
+                rows and columns.
+            </p>
+
+            <pre>
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT
+);
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>4. Inserting Data</h3>
+
+            <p>
+                The INSERT INTO statement is used to add
+                new records to a table.
+            </p>
+
+            <pre>
+INSERT INTO students (id, name, age)
+VALUES (1, 'John', 20);
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>5. Retrieving Data Using SELECT</h3>
+
+            <p>
+                The SELECT statement is used to retrieve
+                data from a database table.
+            </p>
+
+            <pre>
+SELECT * FROM students;
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>6. Using the WHERE Clause</h3>
+
+            <p>
+                The WHERE clause is used to filter records
+                based on a specific condition.
+            </p>
+
+            <pre>
+SELECT * FROM students
+WHERE age >= 18;
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>7. Updating Data</h3>
+
+            <p>
+                The UPDATE statement is used to modify
+                existing records in a table.
+            </p>
+
+            <pre>
+UPDATE students
+SET age = 21
+WHERE id = 1;
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>8. Deleting Data</h3>
+
+            <p>
+                The DELETE statement is used to remove
+                records from a table.
+            </p>
+
+            <pre>
+DELETE FROM students
+WHERE id = 1;
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>9. Primary Key</h3>
+
+            <p>
+                A primary key is used to uniquely identify
+                each record in a table.
+            </p>
+
+            <pre>
+CREATE TABLE courses (
+    id INT PRIMARY KEY,
+    course_name VARCHAR(100)
+);
+            </pre>
+
+        </section>
+
+
+        <section class="topic">
+
+            <h3>10. ORDER BY</h3>
+
+            <p>
+                The ORDER BY clause is used to sort
+                the results returned by a query.
+            </p>
+
+            <pre>
+SELECT * FROM students
+ORDER BY name;
+            </pre>
+
+        </section>
+
+
+        <div class="back-home">
+
+            <a href="index.html" class="button">
+                Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Learning Platform. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
